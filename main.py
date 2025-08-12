@@ -79,13 +79,19 @@ def karatsubaMultiplication(X, Y, base):
     S1 = P1 + "0"*2*sh
     S2 = intSubstraction(P2, intAddition(P1, P3, base), base) + "0"*sh
     S3 = P3
+
     if (S2[0] == '-'):
         result = intSubstraction(intAddition(S1, S3, base), S2[1:], base)        
     else:
         result = intAddition(intAddition(S1, S2, base),S3, base)
+
+    for i in range(len(result)):
+        if result[i] != "0":
+            result = result[i:]
+            break
     return result
 if __name__ == '__main__':
-    args = input("Enter numbers: ")
+    args = input()
     args = args.split()
     if len(args) != 3:
         print("Invalid arguments. You should enter two int and it base.\n")

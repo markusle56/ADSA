@@ -93,8 +93,5 @@ if __name__ == '__main__':
     Y = args[1]
     base = int(args[2])
     sumResult = intAddition(X, Y, base)
-    print(sumResult)
-    sub = intSubstraction(X, Y, base)
-    print(sub)
     product = karatsubaMultiplication(X, Y, base)
-    print(product)
+    print(sumResult, " ", product)

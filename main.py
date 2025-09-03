@@ -11,6 +11,8 @@ class AVLTree:
         self.root = None
 
     def print_pre(self, ptr):
+        if not self.root:
+            print("EMPTY", end="")
         if not ptr:
             return
         print(ptr.value, end=" ")
@@ -18,6 +20,8 @@ class AVLTree:
         self.print_pre(ptr.right)
 
     def print_post(self, ptr):
+        if not self.root:
+            print("EMPTY", end="")
         if not ptr:
             return
         self.print_post(ptr.left)
@@ -25,6 +29,8 @@ class AVLTree:
         print(ptr.value, end=" ")
 
     def print_in(self, ptr):
+        if not self.root:
+            print("EMPTY", end="")
         if not ptr:
             return
         self.print_in(ptr.left)

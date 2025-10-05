@@ -7,7 +7,7 @@ class HashTable:
     def __init__(self):
         self.table = [(NEVER_USED, "") for _ in range(26)]
 
-    def _idx(self, ch: str) -> int:
+    def _idx(self, ch: str):
         return ord(ch) - ord('a')
 
     def _find_slot(self, key: str):
@@ -23,7 +23,7 @@ class HashTable:
             if i == start:
                 return (False, start) 
 
-    def search(self, key: str) -> bool:
+    def search(self, key: str):
         found, _ = self._find_slot(key)
         return found
 
